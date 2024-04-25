@@ -61,6 +61,13 @@ Note: Please give 50 seconds to 2 minutes to UI for loading data. As backend is 
     - When clicked on a broader category
 11. **Orders Page**
 
+## Preview
+
+<div style="display:flex;flex-wrap:wrap;">
+   <img src="index.png" alt="Image 29">
+</div>
+
+
 ## SEO, robots.txt and sitemap.xml
 - QuickHire's SEO improve for search engine visibility.
 - Included a robots.txt file to control search engine bot access to the site.
