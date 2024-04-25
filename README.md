@@ -1,70 +1,326 @@
-# Getting Started with Create React App
+# QuickHire
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+QuickHire is like an online marketplace where people can offer their skills and services for others to hire or buy. Building an app or a website or even helping a person in developing something for your needs, QuickHire is the ideal platform for everyone.
 
-## Available Scripts
 
-In the project directory, you can run:
+* *Date Created*: 29 Jan 2024
+* *Last Modification Date*: Apr 9, 2024
+* *Frontend Deployed URL*: <https://quick-hire.netlify.app/>
+* *Backend Deployed URL*: <https://quickhire-backend-1.onrender.com/>
 
-### `npm start`
+Note: Please give 50 seconds to 2 minutes to UI for loading data. As backend is hosted on Render as free tier, and it will take sometime to start.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Authors
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- [Hiteshkumar Gupta](ht643276@dal.ca) - _(Frontend, Backend Developer)_
+- [Rahul Hambarde](rahul.hambarde@dal.ca) - _(Frontend, Backend Developer)_
+- [Parth Pinakin Modi](pr571545@dal.ca) - _(Frontend, Backend Developer)_
+- [Angel Christian](an321060@dal.ca) - _(Frontend, Backend Developer)_
+- [Tijilkumar Parmar](tj950701@dal.ca) - _(Frontend, Backend Developer)_
+- [Yashkumar Khorja](ys944579@dal.ca) - _(Frontend, Backend Developer)_
 
-### `npm test`
+# Table of Contents
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- [Features](#features)
+- [Project Structure](#project-structure)
+  - [Frontend](#frontend)
+  - [Backend](#backend)
+- [Getting Started - Frontend](#getting-started---frontend)
+- [Getting Started - Backend](#getting-started---backend)
+- [Acknowledgments](#acknowledgments)
+- [References](#references)
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Features
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. **Product Wishlist Page**
+2. **Search Result Page**
+   - Services List
+   - Sort options
+3. **Individual Service Page**
+   - Service Details
+   - Add to Wishlist
+   - Send Message
+4. **Feedback and Rating System**
+   - Both ways
+5. **User Management**
+   - Login Page
+   - Sign up page
+   - User Profile Page
+     - Reviews as well
+6. **Payment Gateway for Service**
+   - Payment Processing on the individual service screen
+7. **Become A Seller Setup**
+   - Multiple pages, similar to Fiverr
+8. **Service Creation Page for Seller**
+9. **Wishlist for the User, My Services for the Seller**
+    - View
+    - Edit
+    - Disable
+10. **Subcategory Service Page**
+    - When clicked on a broader category
+11. **Orders Page**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## SEO, robots.txt and sitemap.xml
+- QuickHire's SEO improve for search engine visibility.
+- Included a robots.txt file to control search engine bot access to the site.
+- Added a sitemap.xml file to aid search engine crawling and indexing.
 
-### `npm run eject`
+## Project Structure
+### Frontend
+In our frontend implementation, we have adopted a feature-based organization structure:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- **Features Folder**: Contains subfolders for each feature of the application.
+  - Within each feature folder:
+    - **Components**: Individual components related to that feature.
+    - **CSS Files**: Each component has its own CSS file, allowing for easier management of styles.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Backend:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+In this project, we have structured our backend using the following folders:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- **Controller**: Contains the controller files responsible for handling incoming requests and returning appropriate responses.
+- **Middleware**: Houses middleware functions used for request preprocessing, authentication, etc.
+- **Models**: Contains the data models used in the application.
+- **Routes**: Defines the API routes and connects them to the appropriate controller functions.
 
-## Learn More
+## Getting Started - Frontend
+### Prerequisites
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+To have a local copy of this lab up and running on your local machine, you will first need to install the following libraries and tools:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
+git
+node: v14.21.3
+npm: v6.14.18
+react: ^17.0.1
+```
 
-### Code Splitting
+To have a local copy of this assingnment up and running on your local machine, you will first need to install the following software:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Download Install node from node website
+```
+Website: https://nodejs.org/en/download
+```
 
-### Analyzing the Bundle Size
+### Installing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+A step by step series of examples that tell you how to get a development env running
 
-### Making a Progressive Web App
+Clone repository
+```
+git clone https://github.com/hmgtech/quickhire.git
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Change directory to app
+```
+cd csci_5709_grp-04
+cd Frontend
+cd quickhire
+```
+Install packages
+```
+npm i
+```
+Create .env file add following credentials
+```
+REACT_APP_BACKEND_URL=https://quickhire-backend-1.onrender.com/api/v1/
+REACT_APP_FIREBASE_API = AIzaSyAeyFuIDm34sjFU0_yGgMTJmpyJTCmoE5k
+```
+Run Project
+```
+npm start
+```
+Navigate to `http://localhost:3000/`. The application will automatically reload if you change any of the source files.
 
-### Advanced Configuration
+## Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+To deploy on ubuntu server, follow this steps:
+Clone repository
+```
+git clone https://github.com/hmgtech/quickhire.git
+```
 
-### Deployment
+Change directory to app
+```
+cd csci_5709_grp-04
+cd Frontend
+cd quickhire
+```
+Install packages
+```
+npm i
+```
+Create .env file add following credentia;s
+```
+REACT_APP_BACKEND_URL=https://quickhire-backend-1.onrender.com/api/v1/
+REACT_APP_FIREBASE_API = firebase-api-key
+```
+Build Project
+```
+npm run build
+```
+This will regenerate build folder which will contains index.html.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Point `nginx` server to this location.
 
-### `npm run build` fails to minify
+Your server will be up and running.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Built With
+
+* [React](http://www.dropwizard.io/1.0.2/docs/) - The web library used
+* [Material UI](https://v4.mui.com/getting-started/installation/) - Styling library
+* [FlatIcon](https://www.flaticon.com/) - For icons
+* [Stripe](https://stripe.com/) - Online payment processing platform
+
+
+## Getting Started - Backend
+### Prerequisites
+
+To have a local copy of this lab up and running on your local machine, you will first need to install the following libraries and tools:
+
+```
+git
+node: v14.21.3
+npm: v6.14.18
+```
+
+To have a local copy of this assingnment up and running on your local machine, you will first need to install the following software:
+
+Download Install node from node website
+```
+Website: https://nodejs.org/en/download
+```
+
+### Installing
+
+A step by step series of examples that tell you how to get a development env running
+
+Clone repository
+```
+git clone https://github.com/hmgtech/quickhire.git
+```
+
+Change directory to app
+```
+cd csci_5709_grp-04
+cd Backend
+```
+Create .env file add following credentia;s
+```
+PORT=4000
+CORS_ORIGIN=*
+MONGODB_URI=mongodb+srv://servicequickhire:QuickHire24@quickhire.fimqbyx.mongodb.net/quickhire?retryWrites=true&w=majority
+SECRET_KEY=secret
+USER=service.quickhire@gmail.com
+PASS=evuu omfs gucw mhal
+```
+
+Install packages
+```
+npm i
+```
+Run Project
+```
+npm run dev
+```
+Navigate to `http://localhost:4000/`. The application will automatically reload if you change any of the source files.
+
+## Deployment
+
+To deploy on ubuntu server, follow this steps:
+Clone repository
+```
+git clone https://github.com/hmgtech/quickhire.git
+```
+
+Change directory to app
+```
+cd csci_5709_grp-04
+cd Backend
+```
+Install packages
+```
+npm i
+```
+Create .env file add following credentia;s
+```
+PORT=4000
+CORS_ORIGIN=*
+MONGODB_URI=mongodb-url
+SECRET_KEY=secret
+USER=your-email@email.com
+PASS=your-password
+```
+Build Project
+```
+npm run build
+```
+This will regenerate build folder which will contains index.html.
+
+Point `nginx` server to this location.
+
+Your server will be up and running.
+
+## Built With
+
+* [Node.js](https://nodejs.org/) - JavaScript runtime
+* [Express.js](https://expressjs.com/) - Web application framework for Node.js
+* [MongoDB](https://www.mongodb.com/) - NoSQL database
+
+## References
+Images used for the cards in the projects (they are cited in project readme file as well):
+```
+1. Creative IT Institute. [Hair Treatment Course Image]. [Online]. Available. https://www.creativeitinstitute.com/images/course/course_1663052056.jpg [Accessed On: Feb 6, 2024]
+
+2. Dribbble. Hair Treatment App. [Online]. Available. https://dribbble.com/shots/19606563-Hair-Treatment-App [Accessed On: Feb 6, 2024]
+
+3. Dribbble. Infinite Software. [Online]. Available. https://dribbble.com/shots/3812899-Infinite-Software/attachments/10034607?mode=media [Accessed On: Feb 6, 2024]
+
+4. Dribbble. Skype Universal Windows App. [Online]. Available. https://dribbble.com/shots/2652326-Skype-Universal-Windows-App/attachments/9414061?mode=media [Accessed On: Feb 6, 2024]
+
+5. Fotor. Profile Picture Ideas. [Online]. Available. https://www.fotor.com/blog/profile-picture-ideas/ [Accessed On: Feb 6, 2024]
+
+6. Fiverr. "Fiverr - Freelance Services Marketplace", 2024. [Online]. Available: https://www.fiverr.com/ [Accessed on: February 6, 2024]
+
+7. Upwork. "Upwork - The World's Work Marketplace, 2024" [Online]. Available: https://www.upwork.com/ [Accessed on: February 6, 2024]
+
+8. Material UI. "Overview." [Online]. Available: [https://mui.com/material-ui/getting-started/](https://mui.com/material-ui/getting-started/) Accessed February 21, 2024.
+
+9. “Diary free icon,” Flaticon. [Online]. Available: https://www.flaticon.com/free-icon/diary_10748360?term=writing&page=1&position=90&origin=search&related_id=10748360. [Accessed On: Feb 27, 2024].
+
+10. “Code free icon,” Flaticon. [Online]. Available: https://www.flaticon.com/free-icon/code_1903572?term=programming&related_id=1903572. [Accessed On: Feb 27, 2024].
+
+11. “Diary free icon,” Flaticon. [Online]. Available: https://www.flaticon.com/free-icon/diary_10748500?related_id=10748500. [Accessed On: Feb 27, 2024].
+
+12. “Photo free icon,” Flaticon. [Online]. Available: https://www.flaticon.com/free-icon/photo_2990729?term=photography&related_id=2990729. [Accessed On: Feb 27, 2024].
+
+13. “Bullhorn free icon,” Flaticon. [Online]. Available: https://www.flaticon.com/free-icon/bullhorn_1998087?term=digital+marketing&related_id=1998087. [Accessed On: Feb 27, 2024].
+
+14. “Shopping Online free icon,” Flaticon. [Online]. Available: https://www.flaticon.com/free-icon/shopping-online_1260235?term=digital+marketing&page=1&position=13&origin=search&related_id=1260235. [Accessed On: Feb 27, 2024].
+
+15. Flatworldsolutions.com. [Online]. Available: https://cdn.flatworldsolutions.com/featured-images/top-10-online-video-editing-tools.jpg. [Accessed On: Feb 27, 2024].
+
+16. Com.ph. [Online]. Available: https://www.truelogic.com.ph/wp-content/uploads/2021/09/dynamic_website.png. [Accessed On: Feb 27, 2024].
+
+17. Ctfassets.net. [Online]. Available: https://images.ctfassets.net/ooa29xqb8tix/22yB0fxGdusPYvjeHt0tIc/5e8425645473fbfc465de26fff504c89/Metadata_the_Figma_Handbook.jpg. [Accessed On: Feb 27, 2024].
+
+18. Berkeley.edu. [Online]. Available: https://multimedia.journalism.berkeley.edu/wp-content/uploads/stand_up_vo-main.jpg. [Accessed On: Feb 27, 2024].
+
+19. Medium.com. [Online]. Available: https://miro.medium.com/v2/resize:fit:1400/1*MirlZnbuS9Cs9bVxxSPbjg.jpeg. [Accessed On: Feb 27, 2024].
+
+20. Seo-hacker.com. [Online]. Available: https://seo-hacker.com/wp-content/uploads/2019/07/Cover-Photo-New-Website-SEO-A-Comprehensive-Guide-1024x768.jpg. [Accessed On: Feb 27, 2024].
+
+21. Buffer.com. [Online]. Available: https://buffer.com/cdn-cgi/image/w=1000,fit=contain,q=90,f=auto/library/content/images/size/w1200/2022/10/thought-catalog-505eectW54k-unsplash.jpg. [Accessed On: Feb 27, 2024].
+```
+
+## Acknowledgments
+
+- Design is inspired by [Fiverr](https://www.fiverr.com/) and [Upwork](https://www.upwork.com/).
+- Created React application using template [create-react-app](https://create-react-app.dev/docs/getting-started)
+- Used [Material-UI](https://v4.mui.com/getting-started/installation/) components and icons
+- Used [react-multi-carousel](https://www.npmjs.com/package/react-multi-carousel)'s to create smooth carousel for displaying Popular Services component 
+- Used [react-parallax](https://www.npmjs.com/package/react-parallax) for animation of Hero section for Landing page
+- Used [typewriter-effect](https://www.npmjs.com/package/typewriter-effect) to animate text
+- [Render](https://render.com/) - For Backend hosting
+- Hats off to the Medium.com and Stackoverflow.com community for providing useful tutorials and solutions
